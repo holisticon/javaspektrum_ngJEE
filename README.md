@@ -1,10 +1,16 @@
-Sample AngularJS-based MobileApp with JEE backend
+Moderne Webanwendungen mit JEE
 ===================
 
-Simple demo app combining a AngularJS with Cordova-based Hybrid Apps with a JAX-RS backend:
-* [server](https://github.com/hypery2k/angular_cordova_app/tree/master/server) (NOT YET COMPLETE)
-* [app](https://github.com/hypery2k/angular_cordova_app/tree/master/app)
+Beispielanwendung zu JavaSpektrum Artikel basierend auf AngularJS/Cordova-Basis.
 
-[![Build Status](https://server.holisticon.de/jenkins/buildStatus/icon?job=ngJEE)](https://server.holisticon.de/jenkins/job/ngJEE/)
+Aktuelle Webarchitekturen setzen heute vermehrt auf einen API-Ansatz. Auch im JEE-Umfeld lässt sich das in Verbindung von JAX-RS und AngularJS nutzen.
+AngularJS - ein Framework von Google zur Entwicklung von Web Apps - basiert auf einer “Model View Controller” (MVC) Architektur. Diese Architektur erlaubt eine Strukturierung des Quellencodes, welche auch die Entwicklung von großen “Enterprise” Anwendungen ermöglicht, ohne die Kontrolle über den Quellencode zu verlieren - ein Problem von reinen JavaScript-Anwendungen. Je nach Einsatzszenario kann das AngularJS-Frontend dann auch als hybride App genutzt werden.
+Anhand einer Beispielanwendung wird gezeigt, wie man eine hybride App entwickelt, die Inhalte des JEE-Backends darstellt und die WebSocket-Schnittstelle für die Kommunikation aller App-Nutzer nutzt.
 
-mvn -Pdeploy-local-jboss install
+* [Demo-WebApp](https://martinreinhardt-online.de/apps/stable/ngJEE/)
+
+## Development
+
+### Lokales Deployment
+
+```mvn -Pdeploy-local-jboss install```
