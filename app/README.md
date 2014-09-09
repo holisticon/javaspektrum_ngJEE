@@ -24,8 +24,15 @@ Einfache Demo App die AngularJS mit Cordova zu einer hybriden App für iOS kombi
   * `cd app`
   * `npm install`
   * `bower install`
-  * `grunt`
-  * `grunt server` (Bei Fehlern wg. fehlende Modulen einfach ein `sudo chmod –R 777` . im aktuellen Verzeichnis ausführen)
+  * `grunt build`
+     * Build sollte erfolgreich durchlaufen mit:
+    
+       >$ Running "autoprefixer:dist" (autoprefixer) task
+       >
+       >  No "concat" targets found.
+     * Bei Fehlern wg. fehlende Modulen einfach ein `sudo chmod –R 777` . im aktuellen Verzeichnis ausführen
+
+  * `grunt server`
 
 >In einigen Umgebung sind sudo-Recht nötig
 
@@ -43,10 +50,12 @@ Die URL für die lokale Entwicklung ist http://localhost:9000
 ### iOS
 
 Build für iOS anstoßen
+* `cd app`
 * ```cordova prepare ios```
 * Projekt in Xcode öffnen
 
 ### Android
+* `cd app`
 * [ADT](https://developer.android.com/sdk/index.html) installieren
 * ```cordova plattform add android```
 
