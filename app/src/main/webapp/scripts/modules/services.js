@@ -51,7 +51,7 @@ app.service('SettingsService', function($rootScope, localStorageService) {
             } else {
             	cfg = {
                     valid: false,
-                    server: 'localhost:8080/cordova-app',
+                    server: 'localhost:8080/cordova-server-backend',
                     timeout: 2000
                 }
             }
