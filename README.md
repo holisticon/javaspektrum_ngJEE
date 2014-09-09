@@ -11,6 +11,7 @@ Anhand einer Beispielanwendung wird gezeigt, wie man eine hybride App entwickelt
 
 ## Development
 
-### Lokales Deployment
+* [App](app/README.md)
+* [Server](server/README.md)
 
-```mvn -Pdeploy-local-jboss install```
+

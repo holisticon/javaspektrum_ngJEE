@@ -33,3 +33,4 @@ server/mem.h2.db
 server/logs/*
 server/mem.trace.db
 app/.project
+.project
