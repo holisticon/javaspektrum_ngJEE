@@ -8,6 +8,12 @@ AngularJS - ein Framework von Google zur Entwicklung von Web Apps - basiert auf 
 Anhand einer Beispielanwendung wird gezeigt, wie man eine hybride App entwickelt, die Inhalte des JEE-Backends darstellt und die WebSocket-Schnittstelle für die Kommunikation aller App-Nutzer nutzt.
 
 * [Demo-WebApp](https://martinreinhardt-online.de/apps/stable/ngJEE/)
+* Demo-Nutzer
+	* user1/user1
+	* user2/user2
+	* user3/user3
+	
+![iPhone Sample](https://github.com/holisticon/javaspektrum_ngJEE/raw/master/images/screenshot.png)
 
 ## Development
 
