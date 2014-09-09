@@ -3,9 +3,9 @@ var cordova;
 describe('main', function() {
 
   // load the controller's module
-  beforeEach(module('ngJEE-Chat'));
+  beforeEach(module('cordova-chat-app'));
 
-  describe("MainController", function() {
+  describe("AppController", function() {
 
     var controller,
       scope;
@@ -14,7 +14,7 @@ describe('main', function() {
     // Initialize the controller 
     beforeEach(inject(function($rootScope, $controller) {
       scope = $rootScope.$new();
-      controller = $controller("MainController", {
+      controller = $controller("AppController", {
         $scope: scope
       });
     }));

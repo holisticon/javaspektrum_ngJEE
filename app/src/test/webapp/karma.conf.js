@@ -19,6 +19,7 @@ module.exports = function(config) {
       '../../../bower_components/angular-mocks/angular-mocks.js',
       '../../../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js',
       '../../../bower_components/angular-block-ui/angular-block-ui.js',
+      '../../../bower_components/angular-local-storage/angular-local-storage.js',
       '../../../bower_components/angular-bootstrap/ui-bootstrap.js',
       '../../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       '../../main/webapp/scripts/*.js',
