@@ -3,7 +3,7 @@ var cordova;
 describe('main', function() {
 
   // load the controller's module
-  beforeEach(module('angularCordovaApp'));
+  beforeEach(module('ngJEE-Chat'));
 
   describe("MainController", function() {
 

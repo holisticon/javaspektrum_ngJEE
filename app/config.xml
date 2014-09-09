@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="de.martinreinhardt-online.de.apps.demo.angularCordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>angularCordovaApp</name>
+<widget id="de.holisticon.javaspektrum.ngjee.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ngJEE-Chat</name>
     <description>
         Simple demo app combining AngularJS with Cordova-based Hybrid Apps.
     </description>
-    <author email="contact@martinreinhardt-online.de" href="https://github.com/hypery2k/angular_cordova_app">
+    <author email="martin.reinhardt@holisticon.de" href="https://github.com/holisticon/javaspektrum_ngJEE">
         Martin Reinhardt
     </author>
     <content src="index.html" />

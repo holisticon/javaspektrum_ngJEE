@@ -1,8 +1,8 @@
 {
-  "name": "angularCordovaApp",
+  "name": "ngJEE-Chat",
   "version": "1.0.0",
   "dependencies": {},
-  "repository": "https://github.com/hypery2k/angular_cordova_app",
+  "repository": "https://github.com/holisticon/javaspektrum_ngJEE",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.2.0",
