@@ -33,13 +33,18 @@ app.controller('ChatController', function($rootScope, $scope, $routeParams, Sett
 
     connection.onopen = function() {
       console.log('Connected to chat service');
-      $rootScope.loading = false;
+      $scope.$apply(function() {
+        $rootScope.loading = false;
+      });
     }
     connection.onclose = function() {
       console.log('Connection to chat service closed.');
     }
     connection.onerror = function(error) {
       console.log('Error in chat service' + error);
+      if (navigator.notification) {
+        navigator.notification.alert('Could not connect to chat service backend. Please choose chat partner again.', null, 'Error in chat service', 'OK');
+      }
     }
     connection.onmessage = function(event) {
       $rootScope.loading = true;
