@@ -1,12 +1,17 @@
-app.controller('AppController', function($rootScope, $scope) {
-  $rootScope.loading = false;
+app.controller('AppController', function($rootScope, $scope, CordovaService) {
 
-  $rootScope.$on("$routeChangeStart", function() {
-    $rootScope.loading = true;
-  });
-
-  $rootScope.$on("$routeChangeSuccess", function() {
+  CordovaService.ready.then(function() {
+    // Cordova is ready
     $rootScope.loading = false;
+
+    $rootScope.$on("$routeChangeStart", function() {
+      $rootScope.loading = true;
+    });
+
+    $rootScope.$on("$routeChangeSuccess", function() {
+      $rootScope.loading = false;
+    });
+
   });
 
 });
@@ -19,13 +24,16 @@ app.controller('ChatController', function($rootScope, $scope, $routeParams, Sett
   var url = 'ws://' + settings.server + '/message/' + sender;
 
   function initChat() {
+    $rootScope.loading = true;
     var self = this;
     $scope.messages = [];
     $scope.sender = sender;
+    $scope.recipient = recipient;
     connection = new WebSocket(url);
 
     connection.onopen = function() {
       console.log('Connected to chat service');
+      $rootScope.loading = false;
     }
     connection.onclose = function() {
       console.log('Connection to chat service closed.');
@@ -34,14 +42,17 @@ app.controller('ChatController', function($rootScope, $scope, $routeParams, Sett
       console.log('Error in chat service' + error);
     }
     connection.onmessage = function(event) {
+      $rootScope.loading = true;
       var msg = angular.fromJson(event.data);
       $scope.$apply(function() {
         $scope.messages.push(msg);
+        $rootScope.loading = false;
       });
     }
   }
 
   function sendMessage() {
+    $rootScope.loading = true;
     var msg = {
       to: recipient,
       from: sender,
@@ -49,6 +60,7 @@ app.controller('ChatController', function($rootScope, $scope, $routeParams, Sett
     };
     connection.send(JSON.stringify(msg));
     $scope.message = '';
+    $rootScope.loading = false;
   }
 
   // public methods
@@ -63,9 +75,11 @@ app.controller('ChatController', function($rootScope, $scope, $routeParams, Sett
 app.controller('UsersController', function($rootScope, $scope, UserService) {
 
   function loadUsers() {
+    $rootScope.loading = true;
     UserService.listAllUsers().then(
       function(response) {
         $scope.users = response.data;
+        $rootScope.loading = false;
       }
     );
   }

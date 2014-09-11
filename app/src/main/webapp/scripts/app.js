@@ -1,4 +1,5 @@
 var app = angular.module('cordova-chat-app', [
+  'fsCordova',
   'ngRoute',
   'ngTouch',
   'mobile-angular-ui',
@@ -18,7 +19,7 @@ app.config(function($routeProvider, $locationProvider) {
       controller: 'UsersController'
     }).when('/users/:username', {
       templateUrl: 'views/chat.html',
-      controller: 'ChatController'      
+      controller: 'ChatController'
     }).otherwise({
       redirectTo: '/home'
     });
